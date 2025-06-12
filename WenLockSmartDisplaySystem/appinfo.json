@@ -1,0 +1,9 @@
+{
+    "id": "com.wenlock.smartdisplay",
+    "version": "1.0.0",
+    "title": "Wenlock Hospital Smart Display",
+    "type": "web",
+    "main": "index.html",
+    "icon": "icon.png"
+  }
+  

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HospiSync Token Display</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div id="config">
+    <h2 id="getDeptId">Enter Department ID</h2>
+    <input type="number" id="deptInput" placeholder="e.g. 3" />
+    <button id="setBtn" onclick="setDepartment()">Start Display</button>
+  </div>
+
+  <div id="displaySection" style="display: none;">
+    <h1>Live Token Display - Department <span id="deptLabel"></span></h1>
+    <table id="tokenTable">
+      <thead>
+        <tr>
+          <th>Token</th>
+          <th>Room</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="tokenBody"></tbody>
+    </table>
+    <button id="changeBtn" onclick="changeDepartment()">Change Department</button>
+  </div>
+
+  <!-- Emergency Alert Overlay -->
+  <div id="alertOverlay">
+    <div>
+      <div class="alert-text" id="alertMessage"></div>
+      <div id="alertDepartment"></div>
+    </div>
+  </div>
+
+  <!-- Alert Sounds -->
+  <audio id="codeRedSound" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="auto"></audio>
+<audio id="codeOrangeSound" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" preload="auto"></audio>
+<audio id="codeBlueSound" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" preload="auto"></audio>
+<audio id="codeGreenSound" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" preload="auto"></audio>
+<!-- Pause Button for Alerts -->
+<button id="pauseAlertBtn" onclick="pauseAllAlerts()" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6666;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+">Pause Alert Sound</button>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+    "id": "com.hospital.inventorydisplay",
+    "version": "1.0.0",
+    "vendor": "WenlockHospital",
+    "type": "web",
+    "main": "index.html",
+    "title": "Hospital Inventory Display",
+    "icon": "icon.png",
+    "uiRevision": 2
+}
+  

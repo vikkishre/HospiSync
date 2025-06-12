@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventory Display</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header>
+    <h1>Hospital Inventory Dashboard</h1>
+    <div class="view-toggle">
+      <button onclick="setView('pharmacy')">Medicines</button>
+      <button onclick="setView('general')">Equipment</button>
+    </div>
+  </header>
+
+  <main>
+    <table id="inventoryTable">
+      <thead>
+        <tr>
+          <th>Item Name</th>
+          <th>Type</th>
+          <th>Quantity</th>
+          <th>Unit</th>
+          <th>Location</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="inventoryBody"></tbody>
+    </table>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
